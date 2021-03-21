@@ -84,17 +84,21 @@ header nav ul {
 .slogan button {
     margin: 5px 10px 5px 0px;
 }
+
 .btn1 {
     color: white;
     background-color: orange;
 }
+
 .btn1:hover {
     background-color: rgb(255, 145, 0);
 }
+
 .btn2 {
     color: white;
     background-color: transparent;
 }
+
 .btn2:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
@@ -103,16 +107,14 @@ header nav ul {
     text-transform: uppercase;
     font-size: 40px; 
     font-weight: 100;
-    margin: 60px 0px 25px 0px;
-    display: flex;
-    justify-content: center;
+    padding-top: 60px;
+    text-align: center;
 }
 
 .line {
     width: 9%;
     height: 2px;
-    margin: auto;
-    margin-bottom: 25px;
+    margin: 25px auto 25px auto;
     background-color: orange;
     border-radius: 25px;
 }
@@ -120,18 +122,17 @@ header nav ul {
 .words {
     font-weight: 100;
     font-size: 20px;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .bcontainer {
     width: 70%;
     font-weight: 200;
-    margin: auto;
-    margin-top: 25px;
+    margin: 25px auto 50px auto;
     display: flex;
     justify-content: space-between;
 }
+
 .bcontainer div {
     width: 24%;
     line-height: 2;
@@ -140,5 +141,101 @@ header nav ul {
 .bcontainer .lg {
     font-size: 20px;
     text-transform: uppercase;
+}
 
+/* position: relative là cha */
+.favourite-meals {
+    display: flex;
+    flex-wrap: wrap; 
+    position: relative;  
+}
+
+/* before là tạo div ảo ở đầu tập hợp */
+/* position: relative sẽ tìm thằng cha có relative gần nhất,
+   nếu ko sẽ tìm body */
+.favourite-meals::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.favourite-meals img {
+    max-width: 25%;
+}
+
+/* how-it-works */
+.how-it-works {
+    min-height: 500px;
+    background-color: rgba(231, 231, 231, 0.486);
+}
+
+.how-it-works .content {
+    padding: 50px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.how-it-works .content .left  {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 45%;
+}
+
+.how-it-works .content .right {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 45%;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.how-it-works .content .left img {
+    max-width: 200px;
+
+}
+
+.how-it-works .content .right span {
+    font-size: 40px;
+    color: orange;
+    padding: 10px 25px;
+    margin-right: 20px;
+    border: 2px solid orange;
+    border-radius: 50%;
+}
+
+.how-it-works .content .right p {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 200;
+    margin: 20px 0px;
+    line-height: 1.5;
+}
+
+.how-it-works .content .bot {
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.how-it-works .content .bot img {
+    width: 135px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* cities */
+.cities-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cities-list .cities-item {
+    max-width: 23%;
+}
+
+.cities-item img {
+    width: 100%;
 }
