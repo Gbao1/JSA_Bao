@@ -1,0 +1,69 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.vidu1 > ul {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightblue;
+    height: 100px;
+}
+
+.vidu1 > ul li {
+    cursor: pointer;
+    line-height: 80px;
+    padding: 10px 132px;
+}
+
+.vidu1 > ul li:hover {
+    transition: 0.4s ease;
+    background-color: lightskyblue;
+    padding-top: 0px;
+    padding-bottom: 15px;
+}
+
+.vidu2 {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    background-color: red;
+    transition: 1s;
+}
+
+.vidu2:hover {
+    width: 500px;
+    border: 2px solid;
+    border-radius: 50%;
+    transform:  scale(1.5 , 1.5);
+    transform: translate(15px,15px);
+    transform: rotate(3600deg);
+} 
+
+.vidu3 {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    position: relative;
+    
+}
+
+.vidu3:hover .nen {
+    opacity: 1;
+}
+
+.vidu3 .nen {
+    transition: 1s;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    opacity: 0;
+}
+
+.nenXam {
+    background-color: gray;
+}
