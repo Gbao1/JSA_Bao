@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    Key : <input type="text" placeholder="Key" id="key">
+    Value : <input type="text" placeholder="Value" id="value">
+    <button id="add">Nhập</button>
+    <button id="remove">Xóa</button>
+
+    <ul id="listJs">
+
+    </ul>
+    
+    <script>
+
+        
+        let btn = document.getElementById("add");
+        btn.addEventListener('click',addItem);
+        let btn1 = document.getElementById("remove");
+        btn1.addEventListener('click', removeItem)
+        render();
+        function addItem() {
+            let key = document.getElementById("key").value;
+            // .value là sẽ lấy giá trị mình nhập vào
+            let value = document.getElementById("value").value;
+            localStorage.setItem(key, value);
+            document.getElementById("key").value = "";
+            document.getElementById("value").value = "";
+            render() 
+            // là tạo ra
+            }
+
+            function removeItem() {
+                let key = document.getElementById("key").value;
+                localStorage.removeItem(key);
+                document.getElementById("key").value = "";
+                render()
+            }
+
+            function render() {
+                let ul = document.getElementById("listJs");
+                ul.innerHTML = "";
+                // Chạy đến hàm này thì sẽ xóa các phần tử cũ
+                for(let i = 0; i < localStorage.length; i++) {
+                    ul.innerHTML += '<li> Key: ' + localStorage.key(i) + ' Value: ' + localStorage.getItem(localStorage.key(i)) + '</li>';
+                    // localStorage.key(i) lấy key còn localStorage.getItem(localStorage.key(i)) lấy value trong key
+                }
+                document.body.appendChild(ul);
+        }
+
+
+
+
+
+
+
+
+
+
+
+        // let json1 = '["Hiển", "Đăng"]';
+        // let json2 = '{"name": "Hiển", "age": 13, "isBol": true}';
+        // let json3 = '[{"name": "Hiển", "age": 13, "isBol": true},{"name": "Đăng", "age": 16, "isBol": false}]';
+        // let json4 = {"jsa_02":{time: "9h" }}
+
+        localStorage.setItem("name", "Bảo")
+        localStorage.setItem("age", 16)
+        localStorage.setItem("arr", JSON.stringify(["abc", "cha"]))
+// Tất cả bị chuyển thành string
+        console.log(typeof localStorage.getItem("name"))
+        console.log(typeof localStorage.getItem("age"))
+        console.log(JSON.parse( localStorage.getItem("arr")))
+        // 
+
+        console.log(localStorage.key(0))
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Lúc đầu i = 1, thỏa mãn điều kiện <= 5
+        // Sau đó sẽ chạy vòng for bé hơn, với mỗi n <= i sẽ cho ra một số "1"
+        // Nếu n lớn hơn i, sẽ thoát ra vòng for lớn hơn và viết lệnh <br>
+        // VD: i = 2, n = 1 sẽ cho ra 1 số "1", n = 2 sẽ cho tiếp 1 số "1" cùng dòng vì vẫn <= i
+           function numberOneTrianle(){
+                for (i=1; i<=5; i++){
+                    for (n=1; n<=i;n++){
+                        document.writeln("1")
+                    }
+                document.writeln("<br>")
+            }
+        }
+        numberOneTrianle()
+    </script>
+</body>
+</html>

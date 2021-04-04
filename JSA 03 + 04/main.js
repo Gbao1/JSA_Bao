@@ -8,3 +8,6 @@ vidu.onclick = function() {
         vidu.classList.add("nenXam")
     }
 }
+
+// btvn setTimeOut vong lap vo han
+// setInterval
